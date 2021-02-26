@@ -1,9 +1,12 @@
 ## Description
-File encryption example with public / private key.
+File encryption example with public / private key. API docs for the project are available with a Swagger documentation at `/api`.
+Run `docker-compose up --build -V -d` and go to `http://localhost:3000/api`
 
 ## Before first run
 
-Run `npm install`
+1. Run `npm install`
+2. Copy `.env.example` to `.env` and fill it with your data
+3. Run tests `npm run test`
 
 ## Running with docker
 
