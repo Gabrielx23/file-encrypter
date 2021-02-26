@@ -8,4 +8,10 @@ export class UserException {
   public static emailAlreadyInUse(): BadRequestException {
     return new BadRequestException('Email already in use!');
   }
+
+  public static keyPairNotExist(): BadRequestException {
+    return new BadRequestException(
+      'Before first encryption you need to generate custom key pair!',
+    );
+  }
 }

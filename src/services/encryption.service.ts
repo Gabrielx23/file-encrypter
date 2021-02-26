@@ -19,6 +19,14 @@ export class EncryptionService {
       },
     });
 
-    return new KeyPairDTO(privateKey, publicKey);
+    return new KeyPairDTO(publicKey, privateKey);
+  }
+
+  public encrypt(publicKey: string, data: string): string {
+    const buffer = new Buffer(data, 'base64');
+
+    const encrypted = crypto.publicEncrypt(publicKey, buffer);
+
+    return encrypted.toString();
   }
 }
