@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  application:
+    container_name: file-encrypter
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: npm run start:dev
